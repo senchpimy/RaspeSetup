@@ -1,0 +1,13 @@
+[Unit]
+Description=Rasberry Oled Fan And Button
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=plof
+ExecStart=/usr/bin/python /home/plof/OledFanButtonRasp/main.py
+
+[Install]
+WantedBy=multi-user.target
